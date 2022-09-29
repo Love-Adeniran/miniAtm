@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ass.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Mini ATM</h1>
+    </header>
+    
+    <section class="container">
+        <nav>   
+            <ul>
+                <li><button onclick="withdraw()" class="first">Withdraw</button></li>
+                <li><button onclick="deposit()" class="second">Deposit</button></li>
+                <li><button onclick="airtime()">Airtime</button></li>
+                <li><button onclick="transfer()">Transfer</button></li>
+            </ul>
+        </nav>
+        <div class="board">
+           <input type="number" placeholder="Enter amount" id="amountEntered"> 
+        </div>
+    </section>
+    <script>
+        var balance = 1000;
+        
+        function withdraw(){
+            // alert(amountEntered.value)
+            userInput = amountEntered.value;
+            if(userInput <= 0){
+                alert("Continue! You are not Ready to withdraw any money here")
+            }
+            else if(userInput == ""){
+                alert("Kindly fill in an amount to withdraw!")
+            }
+            else if(userInput > balance){
+                alert("Insufficient Fund! Be Careful")
+            }
+            else{
+               balance = balance - (parseInt(userInput));
+               alert("Withdrawal Successful! Your current balance is $" + balance)
+            }
+        }
+
+        function deposit(){
+            userInput = amountEntered.value;
+            // alert(userInput)
+            if(userInput <= 0){
+                alert("I jus no say you no be serious Person!");
+                // alert("i dey work")
+            }
+            else if(userInput == ''){
+                alert('Kindly Enter the amount you want to withdraw!');
+            }
+            else{
+                balance = balance + (parseInt(userInput));
+                // alert("i dey work")
+                alert("Dear highly Esteemed Customer! You have successfully Credited your account with $" + userInput + " and Your current balance is $" + balance);
+            }
+        }
+    
+
+
+
+
+        // var balance = 1000;
+        
+        // function withdraw(){
+        //     // alert(money)
+        //     var money = amount.value;
+        //     if(money > balance){
+        //         alert("Don't be a thief, your balance is Insufficient!")
+        //     }
+        //     else{
+        //         balance = balance - (parseInt(money));
+        //         if(balance < 0){
+        //             alert("guy why?, Don't be a thief, your balance is Insufficient!");
+        //         }
+        //         else{
+        //             alert("Withdrawal Success! Your balance is:"+" #"+ balance)
+        //         }
+        //     }
+            
+        // }
+        // function deposit(){
+        //     var money = amount.value;
+        //     // alert(money)
+        //     bal2 = balance + (parseInt(money));
+        //     alert("Dear Esteemed Custumer! You have successfully added #" + money +" to your account, Therefore your balance is  #"+ bal2);
+        // }
+        
+    </script>
+</body>
+</html>

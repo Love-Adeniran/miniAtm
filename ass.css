@@ -1,0 +1,215 @@
+
+body{
+    margin: 2% 20%;
+    padding: 0;
+}
+header{
+    background-color: #0000ee;
+    margin: 0;
+    max-width: 100%;
+    font-size: 20px;
+    padding: 4px;
+    text-align: center;
+}
+header h1{
+    border: 5px dotted #f7f201;
+    display: inline-block;
+    margin: 2%;
+    border-radius: 20px;
+    color: #fff;
+}
+.container{
+    width: 80%;
+    height: 80%;
+    background-color: #e9e8e8;
+    background-image: linear-gradient(#f1ef57, #5858f5);
+    position: absolute;
+    /* top: 35%; */
+    left: 10%;
+    /* border: 0 2px solid #fff; */
+}
+nav{
+    width: 20%;
+    height: 100%;
+    background-color: #e7e408;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+nav ul{
+    margin: 10px;
+    padding: 2px;
+}
+nav li{
+    display: flexbox;
+    margin: 10px;
+    padding: 2px;
+    list-style-type: none;
+    /* position: absolute;
+    top: 10%;
+    left: 10%; */
+}
+nav li button{
+    padding: 20px;
+    width: 80%;
+    background-color:#0000ee;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 15px;
+}
+nav button:hover{
+    background-color: #008000;
+}
+
+.board{
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 5%;
+    left: 22%;
+    background-color: rgb(252, 249, 249);
+    padding: 10%;
+    text-align: center;
+}
+.board input{
+    width: 80%;
+    height: 10%;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    padding: 10px;
+}
+.board input:focus{
+    outline: none;
+    border: 2px dashed #ec1313;
+}
+
+
+/* nav button .first:hover{
+    width: 60%;
+    background-color: red;
+}
+nav button .second:hover{
+    position: absolute;
+    top: 18%;
+    left: 11%;
+    width: 60%;
+    background-color: red;
+} */
+
+/* for laptop screen */
+@media screen and (min-width: 768px){
+    body{
+        margin: 2% 10%;
+        padding: 0;
+    }
+    header{
+        /* background-color: #8d8dfa; */
+        margin: 0;
+        max-width: 100%;
+        /* font-size: 22px; */
+        padding: 2px;
+        text-align: center;
+    }
+    header h1{
+        /* border: 5px dotted #fff; */
+        display: inline-block;
+        margin: 10px;
+        border-radius: 20px;
+        color: #fff;
+    }
+    .container{
+        width: 80%;
+        height: 80%;
+        background-color: #e9e8e8;
+        position: absolute;
+        /* top: 15%; */
+        left: 10%;
+        /* border: 0 2px solid #fff; */
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container{
+        top: 14%;
+    }
+
+    .board{
+        height: 20%;
+        top: 20%;
+    }
+}
+/* for small screen */
+@media screen and (max-width: 720px) {
+    body{
+        margin: 2% 10%;
+        padding: 0;
+        /* background-color: #fff; */
+    }
+    header h1{
+        font-size: 16px;
+        padding: 5px;
+    }
+    .container{
+        margin: 0;
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        /* top: 13%; */
+        left: 10%;
+        background-color: rgb(218, 214, 214);
+        padding: 0;
+        /* border: 0 2px solid #fff; */
+    }
+    nav{
+        width: 50%;
+        height: 5%;
+        text-align: center;
+        /* background-color: #fff; */
+        background: none;
+        position: absolute;
+        top: 40%;
+        left: 26%;
+        z-index: 1;
+        margin: 0;
+    }
+    nav ul li{
+        max-width: 100%;
+        display: inline-block;
+        width: 100px;
+        margin: 0;
+        padding: 2px;
+    }
+    nav li button{
+        padding: 5%;
+        width: 100%;
+        color: #fff;
+        display: inline-block;
+        margin: 0;
+    }
+    .board{
+        /* padding: 0;
+        width: 40%;
+        height: 50%; */
+        position: relative;
+        top: 5%;
+        left: 22%;
+        background-color: #fcf9f9;
+        padding: 10%;
+        text-align: center;
+        margin: 2px;
+    }
+    .board input{
+        width: 60%;
+        height: 5%;
+        margin: 10px;
+        position: absolute;
+        top: 35%;
+        left: 15%;
+
+        /* border-radius: 10px; */
+        /* border: 2px solid #008000; */
+    }
+}
+
+    
